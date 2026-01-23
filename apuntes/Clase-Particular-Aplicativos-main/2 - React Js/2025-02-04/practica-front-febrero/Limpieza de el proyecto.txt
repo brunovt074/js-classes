@@ -1,0 +1,20 @@
+Directorios A Borrar:
+    -src/styles
+    -src/pages/api
+
+Directorios A Crear:
+    -src/components
+    -src/utils
+
+Archivos Modificados:
+    -src/pages/_app.js Hay que borrar la línea 1
+    -src/pages/index.js Borramos todo y escribimos lo siguiente:
+
+        export default function Home() {
+            
+        return (
+            <>
+            <h1>Proyecto Front</h1>
+            </>
+        );
+        }

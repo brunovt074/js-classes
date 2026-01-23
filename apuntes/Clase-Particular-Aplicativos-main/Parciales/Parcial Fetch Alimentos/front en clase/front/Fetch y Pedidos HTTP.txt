@@ -1,0 +1,29 @@
+¿Qué es un fetch / petición HTTP?
+Es un protocolo de comunicación en donde el "cliente" envía una señal a una dirección ip (mediante un url)
+y el "servidor" le responde al cliente con alguna información
+
+Existen varios tipos de peticiones HTTP que tienen usos distintos
+Los que toman en el Pio son:
+
+GET
+    Se dice que es "de lectura"
+    Se usa cuando el cliente sólo quiere recibir información desde el servidor y no tiene intención
+    de enviar información propia.
+
+    Abrir un URL en el navegador es hacer una petición de tipo GET
+    La petición GET NO admite enviar un "body"
+
+POST
+    Se dice que es "de escritura"
+    Se usa cuando el cliente quiere enviar información al servidor.
+
+PUT
+    Se dice que es "de edición"
+    Se usa cuando el cliente tiene la intención de que el servidor modifique información almacenada
+    (el servidor no necesariamente tiene que realmente modificar la información)
+
+
+DELETE
+    Se dice que es "de borrar"
+    Se usa cuando el cliente tiene la intención de que el servidor borre información almacenada
+    (el servidor no necesariamente tiene que realmente borrar la información)

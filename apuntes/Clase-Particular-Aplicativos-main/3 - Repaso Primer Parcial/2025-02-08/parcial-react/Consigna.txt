@@ -1,0 +1,34 @@
+Repaso Examen Primer Parcial React Js
+
+1)  Crear una aplicación frontend de React el cual tenga una ruta "/personajes" que abra un componente página
+
+2)  Crear un componente de React común que reciba y renderice los siguientes props:
+    a. Nombre (String)
+    b. Especie (String)
+    c. Status (String)
+    d. Imagen (String que es un url de internet)
+
+    El componente se debe llamar Tarjeta
+
+3)  En el examen van a contar con una función que consiste en una peticion HTTP
+    Esa peticion descarga un objeto en internet
+
+    Tenemos que hacer que la peticion HTTP sólo se ejecute una vez al principio
+    en la página personajes cuando el componente carga por primera vez
+
+4)  Se debe guardar el responseData.results en una VARIABLE DE ESTADO llamada arrayPersonajes
+    Recordar que el objeto se llama responseData
+
+5)  Hacer un array.map para que el arrayPersonajes se mapee a las tarjetas (del punto 2) y se renderice en pantalla
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+6)  Hacer una variable de estado numérica llamada "página" cuyo valor inicial sea 1
+
+7)  Hacer 2 etiquetas button:
+        La primera "next", aumetará el valor de página en 1
+        La segunda "prev", reducirá el valor de página en 1 EXCEPTO SI página ya es 1
+
+8)  Cambiar el url del api de modo que "?page=" esté concatenado con la página actual
+
+9)  Cambiar el useEffect de la descarga de los personajes para que dependa de la variable de estado página

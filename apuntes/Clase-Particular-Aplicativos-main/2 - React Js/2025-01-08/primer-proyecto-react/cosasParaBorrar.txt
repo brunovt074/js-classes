@@ -1,0 +1,21 @@
+Directorios:
+
+    src/styles
+    src/pages/api
+
+Archivos:
+
+    Todos los archivos de public
+
+Líneas de código:
+
+    src/pages/_app.js - Borramos la línea de import
+
+    src/pages/index.js - Reemplazamos todo el codigo por lo siguiente:
+
+    export default function Home() {
+    return (
+        <>
+        </>
+    );
+    }

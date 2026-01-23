@@ -1,0 +1,38 @@
+pre {
+      position: relative;
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+
+    .blurred {
+      filter: blur(6px);
+      user-select: none;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .blurred.revealed {
+      filter: none;
+      cursor: text;
+      user-select: text;
+    }
+
+    .blurred::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .blurred.revealed::before {
+      display: none;
+    }

@@ -1,0 +1,15 @@
+Los profesores del pio utilizan ambos sistemas para el frontend y para el backend
+
+Version "nueva" - ES6 - frontend
+    - puede usar "import" y "export"
+    - la usan los profesores para el frontend
+    - para crear uno utilizamos un comando CMD
+    - para "levantar" un proyecto frontend nosotros utilizamos el "npm run dev"
+    - usa el puerto 3000
+
+Version "vieja" - CommonJs - backend
+    - puede usar require() y module.exports 
+    - la usan los profesores para el backend
+    - para crear uno debemos copiar y pegar una "plantilla" hecha por los mismos profesores del pio
+    - para "levantar" el backend nosotros utilizamos el "npm run start"
+    - usa el puerto 4000

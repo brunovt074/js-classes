@@ -1,0 +1,7 @@
+src/components
+
+Va a tener lo que nosotros llamamos componentes de react "Comunes"
+
+src/pages
+
+Va a tener lo que nosotros llamamos los componentes de react "Páginas"

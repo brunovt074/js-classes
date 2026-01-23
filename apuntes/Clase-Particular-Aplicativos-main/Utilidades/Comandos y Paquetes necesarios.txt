@@ -1,0 +1,23 @@
+Comandos:
+
+	Front & Back:
+	npm install
+
+	Front:
+	
+	npx create-next-app@latest
+	npm run dev
+
+	Back:
+
+	npm run start
+
+	Acuérdense que los npm run te podés fijar cuál es en package.json
+
+Paquetes:
+
+	Front:
+	npm install socket.io-client
+
+	Back:
+	npm install socket.io

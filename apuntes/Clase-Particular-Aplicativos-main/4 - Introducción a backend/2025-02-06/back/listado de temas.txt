@@ -1,0 +1,22 @@
+1)  app.get(<ruta>, <callback>) - Sintaxis básica
+
+2)  req
+    a. req.query
+    b. req.params
+    c. req.body (Veremos como pasarlo por el front a futuro)
+
+3)  Cómo importar y exportar en el backend
+
+4)  res
+    a. res.send()
+    b. res.json()
+
+5)  Hacer y exportar un arrayUsuarios en utils
+
+6)  app.get(/usuarios)
+
+7)  app.post(/usuarios)
+
+8)  app.put(/usuarios)
+
+9)  app.delete(/usuarios)

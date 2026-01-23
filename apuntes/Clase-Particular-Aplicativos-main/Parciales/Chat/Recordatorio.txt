@@ -1,0 +1,29 @@
+Recordatorio:
+El frontend se inicia con npm run dev
+El backend se inicia con npm run start
+
+Acordarse de hacer npm i en los dos
+
+Problema: Quiero guardar el mensaje del input dentro de una variable.
+
+1) ¿Qué tipo de variable se usa? ¿De estado o normal?
+R) Usamos variable de estado
+
+2) ¿Cuándo guardamos el texto de la variable de estado?
+R) Utilizamos el evento onChange y le pasamos un changeHandler
+
+3) ¿Cómo hacemos que el changeHandler reciba información acerca del evento?
+R) Hacemos que reciba el parámetro event y nos fijamos event.target.value
+
+4) ¿Cómo guardamos event.target.value?
+R) Primero le pasamos el prop value={texto} al input para sincronizar el val inicial
+   Después, dentro del changeHandler, utilizamos el setter para guardar dentro de
+   la variable de estado texto el event.target.value
+   setTexto(event.target.value)
+
+5) ¿Cuál es el método del socket que suscribe al front o al back a un evento?
+R) El socket.on del backend nos dirá a qué eventos está suscrito el back
+
+6) Nosotros tenemos una LISTA DE OBJETOS que simbolizan los mensajes.
+   ¿Cómo podemos transformar esa LISTA DE OBJETOS en una LISTA DE COMPONENTES?
+R) Se hace directamente renderizando el array.map

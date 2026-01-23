@@ -1,0 +1,26 @@
+Para Crear:
+
+Directorios
+src/utils
+src/components
+
+Para Borrar:
+
+Directorios:
+src/styles
+src/pages/api
+
+Archivos:
+(opcional) todo lo que está adentro de la carpeta public/
+
+Líneas de código:
+En src/pages/_app.js se está importando la carpeta styles
+Si se borró esa carpeta, hay que borrar el import
+
+Reemplazar todo src/pages/index.js con esto:
+export default function Home() {
+  return (
+    <>
+    </>
+  );
+}

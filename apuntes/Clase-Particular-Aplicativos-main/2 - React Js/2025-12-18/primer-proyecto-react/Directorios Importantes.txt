@@ -1,0 +1,46 @@
+package.json
+
+    Java Script Object Notation
+    Es un objeto que contiene información importante de nuestro proyecto
+    Contiene una lista de dependencias (paquetes que debemos tener)
+    Contiene una lista de scripts (comandos que puede "correr" npm)
+    Y contiene información miscelánea
+
+/.next/
+/node_modules/
+
+    .next contiene información generada de forma automática acerca de next.
+    node_modules es una carpeta que almacena todas las dependencias (paquete) que tenemos
+    instaladas en nuestro proyecto.
+
+    node_modules es una carpeta con mucho peso que se vuelve a crear si tenemos las dependencias del
+    package.json y corremos uno de los siguientes comandos:
+
+    npm i 
+    npm install
+
+/public/
+
+    Almacenamos los archivos multimedia que pueda usar nuestro frontend.
+    Fotos, videos, audios, fuentes tipográficas, etc
+
+/src/
+
+    Es una carpeta que almacena todo el código de nuestro proyecto
+
+/src/app/
+
+    Es una carpeta que contiene los "componentes página" de la aplicación
+    La página home, la página login, la página productos, etc
+
+/src/components/
+
+    Es una carpeta que contiene los "componentes comunes" de la aplicación
+    El componente botón, formulario, imagen, navBar, footer, etc
+
+/src/hooks/
+
+    Es una carpeta que va a tener los hooks personalizados que utilicemos de forma nativa
+    useSocket.js y ningún otro
+
+    useSocket.js es un archivo hecho por sus profesores que pueden encontrarlo en el repo mío o en su classroom

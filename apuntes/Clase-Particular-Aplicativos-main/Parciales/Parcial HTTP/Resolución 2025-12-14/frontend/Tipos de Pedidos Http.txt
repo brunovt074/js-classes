@@ -1,0 +1,23 @@
+GET     -   Lo utiliza el usuario cuando quiere "leer" información guardada en un servidor
+            El usuario NO ENVÍA INFORMACIÓN AL servidor
+            El servidor responde con información de lectura al usuario
+
+            Es como "abrir" el home de instagram
+
+POST    -   Lo utiliza el usuario cuando quiere "subir" información a un servidor
+            El usuario suele enviar información
+            El servidor suele responder con un código de estado (Subida exitosa / Subida no exitosa)
+
+            Es como "postear" una publicación en instagram
+
+PUT     -   Lo utiliza el usuario cuando quiere que el servidor "modifique" información que tiene guardada
+            El usuario suele enviar información acerca del ítem el cual quiere cambiar
+            El servidor suele responder con un código de estado
+
+            Esto sucedería cuando uno "edita" una publicación o comentario
+
+DELETE  -   Lo utiliza el usuario cuando quiere que el servidor "borre" información guardada
+            El usuario suele enviar información acerca del ítem el cual quiere borrar
+            El servidor suele responder con un código de estado
+
+            Sucedería cuando uno quiere borrar una publicación

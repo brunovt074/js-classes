@@ -1,0 +1,59 @@
+1)  array.map()
+
+    Es un método (funcion dentro de objeto) de un array que nos devuelve otro array transformado
+    Recibe una funcion flecha. Esta sub-funcion flecha recibe sus propios parámetros:
+
+        1) Un parámetro OBLIGATORIO que simboliza el *elemento actual*. Generalmente le llamamos "elemento"
+        2) Un parámetro OPCIONAL que simboliza la posicion en el array del elemento actual. Generalmente llamado "index"
+
+    La sub-funcion flecha SIEMPRE debe devolver algo. Este "algo" puede ser cualquier cosa y reemplazará al elemento en el nuevo
+    array devuelto.
+
+    numeros = [2, 4, 6, 8, 10]
+
+    const arrayDoble = numeros.map(
+        (elemento) => {
+            return elemento * 2
+        }
+    )
+
+    arrayDoble == [4, 8, 12, 16, 20]
+
+2)  useState
+
+    El useState sirve para que los elementos de react puedan CAMBIAR DE ESTADO.
+    Su función principal es crear las VARIABLES DE ESTADO las cuales son variables de react que pueden cambiar su valor.
+
+    El hook useState devuelve un array con 2 componentes:
+
+        1) La variable de estado
+        2) El SETTER asociado a la variable de estado. Es una funcion que lo unico que hace es cambiar el valor de la variable
+
+    El hook useState recibe como PARAMETRO el valor inicial de la variable de estado
+
+    const [varEstado, setterVarEstado] = useState(0)
+
+    setterVarEstado(1)
+
+    ESTO NO SE PUEDE HACER: varEstado = 1
+
+3)  useEffect
+
+    El useEffect es un hook de react que se encarga de la EJECUCION PROGRAMADA de cierto cacho de código.
+    El useEffect no devuelve nada
+    El useEffect recibe 2 parámetros:
+
+        1) Una función flecha generalmente llamada "El efecto" o "callback"
+        2) Un array. Generalmente llamado "array de dependencias" (sólo recibe variables de estado)
+
+    useEffect(
+        () => {},
+        []
+    )
+
+    El array de dependencias dicta cuándo se ejecuta el efecto de la funcion flecha.
+
+    Si el array de dependencias está vacío el efecto sólo se ejecutará una vez sola al principio.
+
+    Si el array de dependencias tiene variables de estado, cada vez que el valor de cualquier variable dentro del array cambie,
+    el useEffect se ejecuta. Además, también se ejecuta al principio.

@@ -1,0 +1,42 @@
+.next/
+node_modules/
+
+    Estas dos carpetas contienen información de next y de los paquetes de react.
+    .next tiene información acerca del proyecto
+    node_modules tiene todos los paquetes instalados (dependencias)
+
+    Estas carpetas son súper pesadas, por lo que generalmente las borramos antes de entregarlas.
+    Podemos recuperarlas fácilmente con el comando
+
+    npm i 
+    npm install
+
+public/
+
+    Esta carpeta contiene los archivos multimedia del proyecto
+    Imagenes, videos, audios, fuentes tipográficas, etc
+
+package.json
+
+    JavaScript Object Notation
+    package.json tiene información interna de nuestros proyectos
+    Se destacan los scripts y las dependencias
+
+src/
+
+    Contiene todo el código que vamos a utilizar en el proyecto
+    Tiene varias subcarpetas
+
+src/app/
+
+    Contiene todos los componentes página del proyecto (todas las páginas)
+    Los archivos que contengan las distintas páginas se deben llamar page.js
+
+src/components/
+
+    Contiene todos los componentes "comunes" que vamos a utilizar en nuestro proyecto
+
+src/hooks/
+
+    Contiene un tipo de archivo el cual almacena funciones especiales llamadas hooks.
+    El único hook que van a tener va a ser useSocket.js

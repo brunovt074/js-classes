@@ -1,0 +1,3 @@
+Para usar este hook asegurarse de tener instalado el paquete socket.io-client
+
+npm i socket.io-client
