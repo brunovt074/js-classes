@@ -1,0 +1,32 @@
+1) Asegurarse de tener NODE instalado
+
+2) Abrir CMD en la dirección donde se quiere hacer el proyecto
+
+3) Ejecutar npx create-next-app@latest
+- No te gustaría usar Typescript
+- No te gustaría usar ESLint
+- No te gustaría usar Tailwind (a menos que lo hayan enseñado)
+- Sí te gustaría usar src/
+- No te gustaría usar App Router (a menos que lo hayan enseñado)
+- No te gustaría personalizar el alias de importación default
+
+4) Una vez armado el proyecto, se debe abrir la carpate con visual studio code
+
+5) En la carpeta 'pages' dentro de 'src', se pueden definir los distintos endpoints (páginas) del sitio
+
+/pages
+  ├── hello.js        --> URL: /hello
+  ├── about/
+      └── index.js    --> URL: /about
+  ├── blog/
+      ├── index.js    --> URL: /blog
+      └── post.js     --> URL: /blog/post
+
+Se puede crear directamente un nuevo archivo con el nombre de la página (hello.js) o se puede crear una carpeta.
+El root del endpoint de la carpeta será el archivo con nombre de "index.js" mientras que cualquier otro que se encuentre dentro será otro url.
+
+6) Para levantar el proyecto, abrir LA CARPETA CREADA en vscode 
+
+	terminal > nueva terminal
+	ejecutar "npm i" o "npm install" (hacen lo mismo)
+	y ejecutar "npm run dev" sin las comillas

@@ -1,0 +1,5 @@
+# Clases particulares viejas:
+https://github.com/MZuran/Clase-Particular-Aplicativos/blob/main/Parciales/Parcial%20Sockets/Consigna.pdf
+
+# Clases propias:
+https://docs.google.com/document/d/1-g7J-qc5pEIueIgH29adfOxwbeyyNu1KadiAxLyG_Qo/edit?tab=t.0#heading=h.wdqrbagyrnyy

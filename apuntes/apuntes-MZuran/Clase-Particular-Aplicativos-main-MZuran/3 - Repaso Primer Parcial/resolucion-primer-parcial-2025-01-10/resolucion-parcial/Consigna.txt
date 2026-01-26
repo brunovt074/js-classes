@@ -1,0 +1,30 @@
+1)  Hacer una aplicacion frontend de react. 
+        a. Usando cmd, crear un nuevo proyecto de react con el comando npx create-next-app@latest
+        b. En la carpeta src/pages, crear una nueva página con por lo menos un h1 que diga "Personajes"
+        c. En la carpeta src/components, crear un componente (llamado tarjeta) que reciba 3 props:
+            -Un nombre
+            -Un url de una imagen
+            -Status
+            -Un raza (humano, alinegena, etc)
+        d. Renderizar una tarjeta con props en la pagina personajes
+
+2)  Uso de useState y useEffect
+        a.  Dentro de la página de personajes, hacer un useEffect que SÓLO SE EJECUTE UNA SÓLA VEZ que haga un fetch a la API de rick y morty
+            
+            La direccion de esta API es https://rickandmortyapi.com
+            La ruta de esta API es /api/character?page=1
+
+        b.  La api va a devolver un objeto. Guardar el objeto.results dentro de una variable de estado
+
+3)  Uso de array.map
+        a. Mapear el array de personajes descargados a la tarjeta hecha en el punto 1 (con props).
+        b. Renderizarlos en la página
+
+4)  useState y botones
+        a. Crear una variable de estado llamada "Página" que comience en el número 1
+        b. Crear 2 botones: uno para sumar un número a la página y otro para restar
+        c. Hacer que la página nunca pueda ir más abajo que 1
+
+5)  cambiar el fetch
+        a. Cambiar la RUTA del fetch de modo que la parte que diga "?page=1" sea reemplaza por "?page=" + pagina
+        b. Hacer que el useEffect en el cual está el fetch DEPENDA de la página

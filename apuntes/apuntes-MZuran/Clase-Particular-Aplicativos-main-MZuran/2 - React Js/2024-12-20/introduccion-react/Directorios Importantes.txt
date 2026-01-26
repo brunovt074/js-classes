@@ -1,0 +1,14 @@
+src/ - para todo el codigo
+src/components - para los componentes comunes
+src/pages - para los componentes pagina
+src/utils - para funciones auxiliares que necesites en varios lugares
+
+public/ - para contenido multimedia
+
+node_modules/ - para guardar los paquetes
+si uno no tiene la carpeta node_modules (como por ejemplo cuando lo descargas de github), se tiene que crear de nuevo
+para crear la carpeta, se debe ejecutar "npm i" o "npm install"
+
+package.json - para guardar info de los paquetes y los scripts
+Los scripts del package.json te sirven para levantar o testear el proyecto con "npm run" en la consola
+json quiere decir Java Script Object Notation

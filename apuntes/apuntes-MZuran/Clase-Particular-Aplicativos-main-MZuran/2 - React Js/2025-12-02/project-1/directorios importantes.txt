@@ -1,0 +1,36 @@
+Directorios:
+
+node_modules/   -   En esta carpeta es donde se guardan automáticamente las dependencias
+                    Si el directorio es borrado, se crea nuevamente de forma automática ejecutando
+                    npm i
+                    npm install
+
+package.json    -   Java Script Object Notation
+                    Contiene información que debe conocer NODE para correr el proyecto
+                    Incluye nombre, versión, dependencias y scripts
+                    Los scripts se corren con npm run <nombre del script>
+
+public/         -   En public nosotros metemos los archivos multimedia que querramos usar en nuestro
+                    proyecto. Fotos, videos, fuentes tipográficas, audios, etc.
+
+src/            -   La carpeta src contiene TODO el código que vayamos a escribir de nuestro proyecto
+                    Tiene varias subcarpetas
+
+src/app/        -   Es carpeta que coniene las páginas del sitio
+                    El root de la carpeta src/apps/ tendrá el directorio que se muestra en el
+                    url sin direccionar. (Por ejemplo localhost:3000/)
+
+        /page.js-   Tiene la página que se va a renderizar en localhost:3000/
+        /layout.js- Tiene el layout que van a utilizar todas las subcarpetas de apps     
+
+src/app/<nombrePagina>/page.js     -   Tiene el archivo página que se renderiza en localhost:3000/<nombrePagina>
+src/app/<nombrePagina>/layout.js   -   Tiene el archivo layout que utilizará esta carpeta y todos sus hijos
+
+src/components/  -  Esta carpeta contendrá todos los componentes "comunes" que vayamos a utilizar en nuestras páginas
+                    Por ejemplo el componente Boton.js o FormularioInput.js
+
+src/hooks/       -  Esta carpeta contiene hooks personalizados para el uso de react.
+                    Por ejemplo el hook useSocket.js
+
+src/utils/       -  Van las cosas útiles que uses en varias partes del programa
+                    Por ejemplo una función que necesites en muchas partes o archivos .json

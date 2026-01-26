@@ -1,0 +1,22 @@
+Crear:
+src/components
+src/utils
+
+Borrar:
+src/styles
+src/pages/api
+
+Todo lo de adentro de public (opcional)
+
+Borrar la línea 1 de src/pages/_app.js
+Borrar la línea 1 hasta 14 (los imports) de src/pages/index.js
+Borrar todo lo que esté dentro del return(<> /* Acá */ </>) dentro de src/pages/index.js
+
+Así se ve index.js
+
+export default function Home() {
+  return (
+    <>
+    </>
+  );
+}

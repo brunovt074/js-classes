@@ -1,3 +1,6 @@
-/apuntes-MZuran
+#/apuntes-MZuran
 acceso-classroom.txt
 .git
+.idea/
+.gitignore
+*.lock*

@@ -1,0 +1,33 @@
+﻿PROYECTOS DE PRODUCCIÓN
+	12-03-2025
+	
+
+	
+
+	
+
+Trabajo Práctico 2:
+Creación Base de datos
+En este trabajo, cada grupo deberá crear una base de datos que cumpla con las condiciones descritas más abajo.
+Para la conexión a la base de datos utilizar:
+
+
+User: 2025-5INF-GXX
+Pass: Propia de cada grupo
+Db: 2025-5INF-GXX
+Ip desde el colegio: 10.1.5.205
+Ip desde sus casas: 181.47.29.35
+
+
+Consignas, en cada una de ellas entregar los comandos SQL y/o diagramas:
+
+
+1. Realizar un diagrama de una base de datos que tenga al menos 3 tablas, todas con relaciones con al menos otra de ellas.
+
+
+2. Realizar las sentencias SQL para crear las tablas e indicar en que orden se deben ejecutar para que no fallen.
+3. Insertar al menos 3 datos en cada tabla o lo necesario para cumplir con que todas tengan relaciones en otras tablas
+4. Realizar al menos 2 Select que tengan un INNER JOIN.
+5. Realizar la sentencia SQL para actualizar un dato creado anteriormente utilizando UPDATE
+6. Realizar la sentencia SQL para eliminar un dato de la tabla utilizando DELETE FROM.
+Profesores: Martín Rivas, Matias Marchesi                                                                                          Colegio Pio IX

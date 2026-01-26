@@ -1,0 +1,76 @@
+Instrucciones 
+SQL
+Proyecto de Producción
+1
+
+Bases de Datos Relaciones
+Las Bases de Datos SQL pueden ser de de tipo relacionales o no relacionales. En el caso de las relacionales se estructura la información en tablas, filas y columnas. Las mismas tienen la capacidad de establecer relaciones de la información entre distintas tablas por medio de claves foráneas.
+También existen bases de datos no relacionales que no tienen porque estructurar su información en tablas, filas y columnas.
+¿Qué es una base de datos relacional?
+¿Cuales son las no relacionales?
+2
+
+Creación de tablas
+Lo primero que necesitamos para comenzar a trabajar con una base de datos es diseñar y crear las varias tablas que necesitaremos para el proyecto.
+Para lo cual, uno primero piensa y arma el diagrama junto al equipo de su base de datos. En este diagrama, se deben poder ver los tipos de datos de las filas y las relaciones entre tablas.
+3
+
+Creación de tablas
+Para la creación de una tabla, es importante aclarar que tipo de dato será cada columna, cual es la primary key y si hay claves foráneas.
+Si hay claves foráneas, es importante que esas tablas ya existan. Por ejemplo, viendo el diagrama anterior no puedo crear la tabla Students si no existe la tabla Grades.
+Entonces creemos la tabla Grades, primero:
+El “if not exists” es para que el comando no se ejecute si la tabla ya existe
+Al final del create, siempre se aclaran las claves primarias y foráneas
+Como el id va a ser la clave primaria, es importante que sea UNIQUE para que no se repita y por comodidad, también es muy útil que sea AUTO_INCREMENT
+4
+
+Creación de tablas
+Una vez, creada la tabla Grades, podemos crear la tabla Students que tiene una clave foránea que referencia al id de Grades.
+Los tipos de datos que estoy utilizando son:
+int para los números,
+varchar(255) para el texto (con un máximo de 255 caracteres)
+La clave foránea primero tiene que ser creada como una columna más con el mismo tipo de dato que en la tabla a la que se va a referenciar.
+5
+
+Insertar datos
+Luego de crear las tablas, lo que sigue es insertar datos.
+Para lo cual se utiliza la instrucción “INSERT INTO”. Y se arma de la siguiente manera: INSERT INTO TABLE (COL1, COL2) VALUES(DATA1, DATA2). 
+Si el dato a agregar es una clave foránea, el valor insertado debe existir en la tabla a la que hace referencia:
+
+
+
+
+También se pueden insertar varios valores en una sola instrucción:
+
+6
+
+Actualizar datos
+En caso de querer actualizar un dato que ya está en la tabla existe la instrucción “UPDATE” a la cual hay que especificarle la tabla, la columna a cambiar y su nuevo valor. 
+También es importante agregar una cláusula where que se cumpla únicamente en el dato que queremos modificar.
+Por ejemplo, voy a actualizar la nota del examen que pusimos antes:
+
+
+
+
+
+
+
+Es una buena práctica usar el id en el WHERE que sabes que no se repite:
+
+7
+
+Eliminar datos
+Por último, si queremos eliminar datos tenemos la sentencia DELETE, a la cual, únicamente hay que pasarle una cláusula WHERE.
+
+
+
+
+
+
+
+Es muy importante a la hora de usar esta instrucción que tengamos cuidado de especificar bien la condición del WHERE, ya que de no usarlo terminaríamos borrando varios datos que no queríamos, y en el peor caso, la tabla completa.
+
+8
+
+Gracias
+9

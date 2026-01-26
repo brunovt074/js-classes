@@ -1,0 +1,9 @@
+npx create-next-app@latest
+
+Para abrir el proyecto de REACT descargado, hacer:
+
+1) Abrir la carpeta en vsCode
+2) Abrir la terminal y correr:
+
+    a. npm install
+    b. npm run dev

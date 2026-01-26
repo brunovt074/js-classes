@@ -1,0 +1,69 @@
+package.json    -  
+
+    Java-Script-Object-Notation
+    Contiene información importante de nuestro proyecto.
+    Particularmente los scripts y las dependencias.
+    Una dependencia es un paquete de node instalado en nuestro
+    proyecto.
+
+    Cuando corremos "npm install" el programa sabe qué paquetes
+    debe descargar y guardar en /node_modules gracias al
+    archivo package.json
+
+./next          -   
+
+    Tiene información de next. No es tan pesada y también
+    es creada con npm i.
+
+./node_modules  -
+
+    node_modules es la carpeta en donde se instalan todos
+    los paquetes descargados de node.
+
+    Es una carpeta famosamente pesada, así que generalemente
+    NO LA VAMOS A SUBIR A INTERNET.
+
+    El comando "npm install" o "npm i" crea la carpeta 
+    node_modules desde 0.
+
+./public    -
+
+    Contiene los archivos multimedia del proyecto.
+    Imagenes, audios, videos, fuentes tipograficas, etc.
+
+./src       -
+
+    Contiene todo el código que vamos a escribir en 
+    nuestro proyecto.
+
+    Tiene varias subcarpetas. Algunas ya vienen definidas
+    y otras las tenemos que crear.
+
+./src/app/
+
+    Contiene las "páginas" que vamos a renderizar en nuestro
+    proyecto
+
+.src/app/layout.js  -   
+
+    Es un conjunto de HTML que van a usar todas las páginas
+    de nuestro proyecto.
+
+    Por ejemplo una barra de navegación o un footer.
+
+.src/app/page.js    -   
+
+    Es la página "Home" de nuestro proyecto.
+
+.src/components/
+
+    Contiene los "componentes" que vamos a renderizar dentro
+    de las distintas páginas del proyecto.
+
+.src/hooks
+
+    Contiene los "hooks" personalizados que vamos a usar
+    en nuestro proyecto.
+
+    En el caso de este curso, el único hook que vamos a 
+    meter ahí es un archivo llamado useSocket.js

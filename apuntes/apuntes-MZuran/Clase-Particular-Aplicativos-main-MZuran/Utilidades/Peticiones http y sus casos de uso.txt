@@ -1,0 +1,22 @@
+GET:
+	Lo usamos cuando queremos que el usuario "pida" información y no le envíe ningún req.body al back.
+	Req.params y req.query funcionan en get pero req.body no ( esto sólo pasa en get )	
+	Es el caso de uso de "lectura"
+
+	Si uno mete el url de el GET en chrome, se puede ver lo que se retorna. Esto sólo funciona con GET.
+
+POST:
+	Lo usamos cuando queremos que el usuario le envíe algún tipo de información al back sin necesariamente
+	pedir nada a cambio.
+	Es el caso de uso de "escritura"
+
+PUT:
+	Lo usamos cuando queremos que el usuario le mande información al backend acerca de cómo cambiar algún dato
+	y cómo encontrar el dato cambiado. "Quiero que me edites este mensaje de whatsapp"
+	Básicamente para que el usuario edite información que YA EXISTE en el backend.
+	Es el caso de uso de "editar"
+
+DELETE:
+	Lo usamos cuando queremos que el usuario le mande info al backend acerca de qué información borrar.
+	"Borrame x foto de Facebook"
+	Es el caso de uso de "eliminar"

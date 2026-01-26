@@ -1,0 +1,41 @@
+﻿PROYECTOS DE PRODUCCIÓN
+	11-03-2024
+	
+
+	
+
+	
+
+Repaso SQL
+Realizar el código en el SQL Workbench que cumpla con las consignas pedidas y tanto el código como los resultados y las respuestas a las preguntas entregarlas en un word de google.
+Para la conexión a la base de datos utilizar:
+
+
+User: 2024-5INF-EJEMPLOS
+Pass: ejemplos
+Db: 2024-5INF-DB
+
+
+La estructura de la base de datos utilizada para este trabajo es:
+
+
+  
+
+
+
+Realizar el código y/o responder:
+
+
+1. Traer a todos los estudiantes de la tabla.
+
+
+2. Traer a todos los estudiantes que estudien “Ingenieria Electronica”.
+3. Traer todas los cursos y/o carreras que tengan alumnos.
+4. Traer todos los estudiantes y exámenes cuya nota sea mayor a 6.
+5. Traer todos los exámenes de la materia “Sistemas Digitales”.
+6. Traer todos los exámenes y el nombre de los alumnos de aquellos que estudien en la carrera de “Bachiller en informática”.
+7. Traer todas las materias con exámenes.
+8. Traer el nombre de la materia, los exámenes y el nombre de los estudiantes de todos aquellos estudiantes cuyo nombre empiece por “M”.
+9. ¿Cómo creen que serían los comandos para crear estas tablas? ¿Es lo mismo crearlas en cualquier orden? ¿Y como insertarían datos en cada una de ellas?
+10. ¿Cómo creen que sería un comando para insertar exámenes con una nota random entre 1 y 10?
+Profesores: Martín Rivas, Matias Marchesi                                                                                          Colegio Pio IX

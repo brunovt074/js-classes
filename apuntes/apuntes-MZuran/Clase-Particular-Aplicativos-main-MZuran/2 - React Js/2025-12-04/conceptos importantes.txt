@@ -1,0 +1,23 @@
+Method:
+Una función que está guardada adentro de un objeto
+console.log()
+
+Prop:
+Un parámetro que recibe la función de un componente de react
+
+function Componente( prop ) {
+	prop.nombre
+}
+
+function Componente( {nombre} ) {
+	nombre
+}
+
+Callback:
+Una función que es recibida por parámetro por otra función
+
+function sumar() {}
+
+function multiplicar(f){}
+
+multiplicar(sumar)

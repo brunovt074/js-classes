@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JavaScript</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      code {
+        background-color: #f8f9fa;
+        padding: 2px 4px;
+        border-radius: 4px;
+        color: #d63384;
+        font-family: "Courier New", Courier, monospace;
+      }
+      pre code {
+        display: block;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 4px;
+        color: #343a40;
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre-wrap;
+        border: 1px solid #ced4da;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 30px 0;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <h1 class="text-primary mb-4">Ejercicios de JavaScript</h1>
+    <div class="alert alert-info">
+      <p>
+        El archivo <code>consigna.js</code> contiene el código necesario para
+        resolver los ejercicios, así como una copia de las preguntas planteadas.
+        Asegúrate de abrirlo si necesitas consultar las consignas o los datos
+        iniciales. Realiza las resoluciones de los ejercicios dentro del archivo
+        <code>resolucion.js</code>.
+      </p>
+      <p>
+        Para ver los resultados, abre la consola del programador en tu
+        navegador. En Chrome, puedes acceder a la consola presionando
+        <b>F12</b> y luego haciendo clic en la pestaña <b>"Console"</b>.
+      </p>
+    </div>
+
+    <hr />
+    <h2 class="text-success">1. Trabajando con Arrays: personas</h2>
+    <p>El primer conjunto de ejercicios utiliza el siguiente array:</p>
+    <pre><code>
+const personas = [
+    { nombre: "Juan", apellido: "Pérez", edad: 25 },
+    { nombre: "Ana", apellido: "Gómez", edad: 17 },
+    { nombre: "Luis", apellido: "Martínez", edad: 32 },
+    { nombre: "Marta", apellido: "Rodríguez", edad: 15 },
+    { nombre: "Carlos", apellido: "Fernández", edad: 20 },
+    { nombre: "Laura", apellido: "Sánchez", edad: 12 },
+    { nombre: "Pedro", apellido: "Díaz", edad: 40 },
+    { nombre: "Sofía", apellido: "Hernández", edad: 16 }
+];
+    </code></pre>
+
+    <h3>Ejercicio 1: Usando <code>map</code></h3>
+    <p>
+      Crea un array llamado <code>personasMapeadas</code> sólo con los nombres y
+      edades de todas las personas. <br/>Por ejemplo, el primer elemento sería <code>{ nombre: "Juan", edad: 25 }</code>.
+    </p>
+
+    <h3>Ejercicio 2: Usando <code>filter</code></h3>
+    <p>
+      Crea un array llamado <code>personasFiltradas</code> en donde se filtre el
+      array del ejercicio 1 y sólo queden los mayores de edad.
+    </p>
+
+    <h3>Ejercicio 3: Usando <code>forEach</code></h3>
+    <p>
+      Recorre el array del ejercicio 2 e imprime un mensaje como: "Juan tiene 25
+      años" con <code>console.log</code> en todos los elementos.
+    </p>
+
+    <hr />
+    <h2 class="text-success">2. Arrays con Métodos: productos</h2>
+    <p>
+      En este ejercicio se trabaja con métodos dentro de objetos. Este es el
+      array que debes usar:
+    </p>
+    <pre><code>
+const productos = [
+    { nombre: "Laptop", precio: 1500, descuento: () => { return 0.1; } },           // Función Flecha
+    { nombre: "Teléfono", precio: 800, descuento: function () { return 0.2; } },    // Función Declarada
+    { nombre: "Monitor", precio: 300, descuento: () => 0.15 }                       // Función Flecha Retorno Implícito
+];
+    </code></pre>
+
+    <h3>Ejercicio 1: Usando <code>forEach</code></h3>
+    <p>
+      Muestra un mensaje como: "Laptop tiene un descuento de $150" para todos
+      los elementos. <br />
+      En el caso de las laptops, esto se calcula como <code>1500 * 0.1</code>
+    </p>
+
+    <h3>Ejercicio 2: Usando <code>map</code></h3>
+    <p>
+      Crea un array llamado <code>productosMapeados</code> que contenga el
+      nombre del producto y su precio ajustado. <br />
+      Por ejemplo, si las laptops tienen un 10% de descuento (0.1), entonces el
+      precio ajustado se puede calcular como <code>1500 * ( 1 - 0.1 )</code>
+    </p>
+
+    <hr />
+    <h2 class="text-success">3. Promedios de Notas: estudiantes</h2>
+    <p>Este es el array que debes usar para calcular los promedios:</p>
+    <pre><code>
+const estudiantes = [
+    { nombre: "María", notas: [8, 9, 10] },
+    { nombre: "José", notas: [6, 7, 8] },
+    { nombre: "Lucía", notas: [9, 9, 10] }
+];
+    </code></pre>
+
+    <h3>Ejercicio 1: Usando <code>map</code></h3>
+    <p>
+      Crea un array llamado <code>estudiantesMapeados</code> con los nombres y
+      promedios individuales de todos los estudiantes.
+    </p>
+
+    <h3>Posible Solución: Suma de Notas y Promedios</h3>
+    <p>
+      Una función que calcule la suma de las notas para cada estudiante podría
+      verse así:
+    </p>
+    <pre><code>
+function sumaDeNotas(estudiante) {
+    let sumaTotal = 0;
+    estudiante.notas.forEach(
+        elemento => sumaTotal = sumaTotal + elemento
+    );
+    return sumaTotal;
+}
+
+// Acordarse que en el mapeo, el parámetro puede tener cualquier nombre
+// Generalmente le ponemos "elemento", pero aquí se llama "estudiante"
+
+const estudiantesMapeados = estudiantes.map(
+    estudiante => ({ nombre: estudiante.nombre, promedio: sumaDeNotas(estudiante) / estudiante.notas.length })
+);
+    </code></pre>
+
+    <h3>Ejercicio 2: Usando <code>forEach y If</code></h3>
+    <p>
+      Muestra en consola quien tiene el promedio más alto de los
+      <code>estudiantesMapeados</code>. <br />
+      Un consejo para empezar es declarar una variable
+      <code>let notaMasAlta = 0</code> y en el forEach <b>comparar</b> usando
+      los operadores de comparacion. <br />
+      Si el promedio del elemento actual es mayor a la nota más alta, entonces
+      la nota más alta se vuelve el promedio actual.
+    </p>
+
+    <hr />
+    <h2 class="text-success">
+      4. Diferencia entre Funciones Flecha y Declaradas
+    </h2>
+    <p>
+      Explora cómo las funciones flecha y declaradas manejan la palabra clave
+      <code>this</code>. Este es el array que debes usar:
+    </p>
+    <pre><code>
+const arrayMetodos = [
+    { nombre: "Pepe", presentarse: function() { console.log(this.nombre); } },   // Función Declarada ("this" funciona)
+    { nombre: "Pedro", presentarse: () => { console.log(this.nombre); } }        // Función Flecha    ("this" no funciona)
+];
+    </code></pre>
+    <p>
+      Proba ejecutando <code>arrayMetodos[0].presentarse()</code> y
+      <code>arrayMetodos[1].presentarse()</code> para observar las diferencias.
+      <br />
+      ¿Que muestra la consola si cambias el console log de pepe para que sólo
+      diga <code>console.log(this)</code>?
+    </p>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="resolucion.js"></script>
+  </body>
+</html>

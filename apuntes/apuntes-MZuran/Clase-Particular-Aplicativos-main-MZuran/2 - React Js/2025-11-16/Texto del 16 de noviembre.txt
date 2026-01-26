@@ -1,0 +1,171 @@
+= 	-> Operador de asignación
+
+Se usa para asignar un valor a una variable
+const x = 5
+
+==	-> Operador de comparación débil
+
+Compara los valores de 2 variables
+
+===	-> Operador de comparación estricta
+
+Compara los valores y los tipos de datos de 2 variables
+
+
+
+
+
+
+
+
+f(x) = x + 3
+
+¿Cómo se llama esta función?
+f
+
+¿A qué es igual f(1)?
+4
+
+¿4 es igual a f(1)?
+Sí
+
+console.log( f(1) == 4 )
+True o False?
+True
+
+console.log( f(1) === 4 )
+True o False?
+True
+
+Decimos que la función f "devuelve" un número
+Si la función "devuelve" un número, se comporta exactamente igual que ese número
+
+nombreDeFuncion(1) === 6
+// Devuelve True
+
+
+
+
+	function duplicar(x) { return 2*x }
+
+Definición de Funciones:
+
+	Se refiere a llamar a la variable que guarda la función
+
+	duplicar
+
+Ejecución de Funciones:
+
+	Se refiere a llamar a la variable que guarda la función y agregarle paréntesis
+	Esto logra que la función "corra" o "se ejecute"
+
+	duplicar()
+	duplicar(2)
+
+
+¿Cómo nos armamos una función flecha?
+1) Definimos la variable
+2) Le ASIGNAMOS mediante el operador asignación el valor de una función flecha
+
+¿Cómo usamos las funciones flecha ya guardadas en una variable?
+1) Igual que siempre
+
+
+Directorios importantes dentro de nuestro proyecto de react:
+
+src/				-> Aquí adentro vamos a tener TODO EL CÓDIGO QUE VAYAMOS A ESCRIBIR
+src/hooks/			-> Acá vamos a tener todos los "hooks" personalizados que les va a dar su profesor
+src/compontents/		-> Acá adentro vamos a tener todos los "componentes" de react que vayamos creando
+
+src/page.js			-> Va a ser el "home" de nuestra página
+src/layout.js			-> Es un archivo que contiene componentes que se comparten con todas las otras páginas (subcarpetas)
+
+src/app/<nombre>/page.js	-> Van a ser los distintos directorios de nuestra página. Por ejemplo /login
+src/app/<nombre>/layout.js	-> Es un layout que tiene los componentes compartidos de el page actual y todas las subcarpetas
+
+node_modules/			-> Es la carpeta que contiene todos los paquetes. Se crea con npm i o npm install.
+public/				-> Es la carpeta que contiene los archivos multimedia (fotos, videos, fuentes tipográficas, etc)
+package.json			-> Es el archivo que contiene los detalles técnicos del proyecto
+
+Una dependencia es un paquete de node que el proyecto necesita para correr
+
+.json
+Java Script Object Notation
+
+
+Cosas que podemos borrar cuando armamos un front nuevo:
+
+1) Todos los contenidos de public/
+2) src/app/favicon.ico
+3) src/app/globals.css
+4) src/app/page.module.css
+
+5) Reemplazar los contenidos de src/app/layout.js con esto:
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+}
+
+6) Reemplazar todos los contenidos de src/app/page.js con esto:
+
+import React from 'react'
+
+function Home() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

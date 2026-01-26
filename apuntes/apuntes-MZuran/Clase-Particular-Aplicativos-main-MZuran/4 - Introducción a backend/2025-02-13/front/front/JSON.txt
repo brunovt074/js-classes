@@ -1,0 +1,17 @@
+Java
+Script
+Object
+Notation
+
+Para correr npm necesitamos tener NODE instalado
+
+Node
+Package
+Manager
+
+Comandos para abrir cada aplicación:
+
+1) npm i / npm install
+2)
+    front:  npm run dev
+    back:   npm run start
