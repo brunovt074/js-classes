@@ -114,8 +114,8 @@ Guardan el valor en la propiedad .value.
 
 IMPORTANTE:
 El .value debe leerse DENTRO de la función del click.
-Si se lee afuera, estará vacío.
-Si lo leemos afuera, estará vacío porque el código corre apenas carga la página y el usuario todavía no escribió nada.
+Si lo leemos afuera, estará vacío porque el código corre apenas carga la página 
+y el usuario todavía no escribió nada.
 */
 
 /*
@@ -199,7 +199,7 @@ Consigna:
 
 // Selectores
 const inputDano = document.getElementById("inputDano");
-const boton = document.getElementById("btnAtacar");
+const btnAtacar = document.getElementById("btnAtacar");
 const spanVida = document.getElementById("vidaTotal"); // El número a cambiar
 const mensajeFinal = document.getElementById("mensajeFinal");
 
@@ -207,7 +207,7 @@ const mensajeFinal = document.getElementById("mensajeFinal");
 let vidaActual = 100;
 
 // Evento
-boton.addEventListener("click", () => {
+btnAtacar.addEventListener("click", () => {
     // A. Leer el daño (parseInt asegura que sea número y no texto)
     const dano = parseInt(inputDano.value);
     // B. Lógica Matemática
