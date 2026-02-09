@@ -81,7 +81,6 @@ export default function Home() {
 
 /*
 3. Borren el contenido de src/styles/globals.css
-(o bórrenlo entero si prefieren).
 */
 
 /* ======================================================
@@ -108,10 +107,10 @@ Escribimos Componentes.
 2. Ejemplo
 
 Vamos a crear una carpeta src/components
-y dentro un archivo Saludo.js.
+y dentro un archivo saludo.js.
 */
 
-// src/components/Saludo.js
+// src/components/saludo.js
 export function Saludo() {
     // Lógica acá (si hubiera)
     const mensaje = "Bienvenido a mi web";
@@ -217,8 +216,16 @@ export default function Home() {
         <>
             <h1>Lista de Invitados</h1>
             {
-                /* 2. TU CÓDIGO ACÁ: Usa personas.map para mostrar los saludos */
-            }
+    personas.map( (persona) => {
+        return (
+            <Saludo
+                
+                nombre={persona.nombre}
+                edad={persona.edad}
+            />
+        )
+    })
+}
         </>
     );
 }

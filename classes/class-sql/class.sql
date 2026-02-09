@@ -50,14 +50,14 @@
 
 -- Primero creamos la tabla "madre" (independiente)
 CREATE TABLE IF NOT EXISTS usuarios (
-                                        id INT PRIMARY KEY AUTO_INCREMENT,
-                                        nombre VARCHAR(255)
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        nombre VARCHAR(255)
     );
 
 -- Luego la tabla que depende de ella (relacionada)
 CREATE TABLE IF NOT EXISTS cartera (
-                                       id INT PRIMARY KEY AUTO_INCREMENT,
-                                       activo VARCHAR(255),
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    activo VARCHAR(255),
     cantidad DECIMAL(10,2),
     usuario_id INT,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
@@ -167,3 +167,34 @@ VALUES ('Ethereum', 2.5, 1);
  sin la cláusula WHERE,
  ¿qué sucede con los datos del almacén?
 */
+
+
+/* 4. RELACIONES: El siguiente nivel 
+   Vamos a crear una tabla de 'transacciones' que dependa de 'activos'.
+   Esto es lo que verán en el TP2.
+*/
+
+CREATE TABLE IF NOT EXISTS transacciones (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    activo_id INT,
+    tipo VARCHAR(10), -- 'compra' o 'venta'
+    cantidad DECIMAL(10,2),
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (activo_id) REFERENCES activos(id)
+);
+
+-- Ejercicio de Inserción Relacionada:
+-- Inserta una compra de Bitcoin (id 1) de 0.5 unidades.
+INSERT INTO transacciones (activo_id, tipo, cantidad) VALUES (1, 'compra', 0.5);
+
+/* 5. CONSULTAS COMPLEJAS (Lo que va al examen)
+   ¿Cómo veo el nombre del activo y la cantidad comprada al mismo tiempo?
+*/
+SELECT activos.nombre_cripto, transacciones.cantidad, transacciones.tipo
+FROM activos
+INNER JOIN transacciones ON activos.id = transacciones.activo_id;
+
+-- EJERCICIO NINJA: 
+-- Intenta borrar el activo 'Bitcoin' (id 1) con DELETE. 
+-- ¿Qué pasa? ¿Por qué SQL te protege?
+-- Respuesta: No puedes porque tiene una transacción asociada (Integridad Referencial).

@@ -7,7 +7,7 @@ En JavaScript, cuando creamos una variable u objeto, este vive en la memoria RAM
 La Base de Datos (SQL) es la solución técnica a este problema. Proporciona Persistencia: la capacidad de escribir información en el almacenamiento físico (disco) para que sobreviva a reinicios y fallos del sistema. Sin SQL, cada vez que abrieras una App de banco, tu saldo volvería a cero.
 
 2. El Almacén Organizado: Tablas y Relaciones
-SQL organiza la información en Tablas compuestas por filas (registros) y columnas (atributos).
+SQL organiza la información en Tablas compuestas por filas y columnas.
 Conceptos Clave de Estructura:
     • Primary Key (PK): Es el identificador único de cada fila (como un DNI). No puede repetirse.
     • Foreign Key (FK): Es una columna que hace referencia al ID de otra tabla. Permite conectar datos (ejemplo: saber a qué usuario le pertenece un gasto).

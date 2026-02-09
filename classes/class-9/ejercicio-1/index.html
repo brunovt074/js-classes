@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Películas</title>
+</head>
+<body>
+
+<h1>Gestión de Películas</h1>
+
+<h3>Agregar Película</h3>
+<input type="text" id="tituloInput" placeholder="Título">
+<input type="number" id="puntuacionInput" placeholder="Puntuación">
+<button onclick="guardarPelicula()">Guardar</button>
+
+<hr>
+
+<button onclick="traerPeliculas()">Actualizar Lista</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Puntuación</th>
+        </tr>
+    </thead>
+    <tbody id="tablaPeliculas"></tbody>
+</table>
+
+<hr>
+
+<h3>Modificar / Eliminar</h3>
+
+<select id="selectPeliculas"></select>
+<input type="number" id="nuevaPuntuacionInput" placeholder="Nueva puntuación">
+
+<button onclick="modificarPuntuacion()">Modificar</button>
+<button onclick="eliminarPelicula()">Eliminar</button>
+
+<script src="frontend.js"></script>
+</body>

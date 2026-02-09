@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Tareas</title>
+</head>
+<body>
+
+<h1>Gestión de Tareas</h1>
+
+<h3>Nueva tarea</h3>
+<input type="text" id="descripcionInput" placeholder="Descripción">
+<select id="estadoInput">
+    <option value="pendiente">Pendiente</option>
+    <option value="completa">Completa</option>
+</select>
+<button onclick="crearTarea()">Crear</button>
+
+<hr>
+
+<button onclick="traerTareas()">Actualizar lista</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody id="tablaTareas"></tbody>
+</table>
+
+<hr>
+
+<h3>Modificar / Eliminar</h3>
+
+<select id="selectTareas"></select>
+
+<select id="nuevoEstadoInput">
+    <option value="pendiente">Pendiente</option>
+    <option value="completa">Completa</option>
+</select>
+
+<button onclick="modificarTarea()">Modificar</button>
+<button onclick="eliminarTarea()">Eliminar</button>
+
+<script src="frontend-bugged.js"></script>
+</body>
+</html>

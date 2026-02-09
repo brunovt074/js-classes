@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Libros</title>
+</head>
+<body>
+    <h1>Gestión de Libros</h1>
+
+    <div style="border: 1px solid black; padding: 10px;">
+        <h3>Nuevo Libro</h3>
+        <input type="text" id="nombreInput" placeholder="Nombre del libro">
+        <input type="number" id="valoracionInput" placeholder="Valoración (1-5)">
+        <button onclick="guardarLibro()">Guardar (POST)</button>
+    </div>
+
+    <hr>
+
+    <button onclick="traerLibros()">Actualizar Tabla (GET)</button>
+    <table border="1" style="margin-top: 10px; width: 100%;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Valoración</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCuerpo">
+            </tbody>
+    </table>
+
+    <hr>
+
+    <div style="border: 1px solid black; padding: 10px; background-color: #f0f0f0;">
+        <h3>Modificar Valoración (Punto 5)</h3>
+        
+        <label>Elegir Libro:</label>
+        <select id="selectLibros"></select>
+
+        <input type="text" id="nuevoNombreInput" placeholder="Nuevo nombre">
+        <input type="number" id="nuevaValInput" placeholder="Nueva Nota">
+        
+        <button onclick="modificarValoracion()">Modificar (PUT)</button>
+    </div>
+
+    <div style="border: 1px solid black; padding: 10px; background-color: #f0f0f0;">
+        <h3>Borrar Libro</h3>
+        
+        <label>Elegir Libro:</label>
+        <select id="selectLibrosDelete"></select>
+        
+        
+        <button onclick="borrarLibro()">Borrar (DELETE)</button>
+    </div>
+    <script src="frontend.js"></script>
+</body>
+</html>
