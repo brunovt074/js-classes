@@ -9,71 +9,88 @@ app.use(cors());
 const server = http.createServer(app);
 
 const io = new Server(server, {
-    cors: {
-        origin: "*",
-    },
+  cors: {
+    origin: "*",
+  },
 });
 
-/* ===============================
-   ESTADO DEL MURO (MEMORIA)
-================================ */
+/*
+================================
+ESTADO EN MEMORIA
+================================
+Cada alumnoId representa una "sala"
+Cada sala tiene su propio muro
+*/
 
-let comentariosPorSala = {};
+const comentariosPorSala = {};
 
-/* ===============================
-   SOCKETS
-================================ */
+/*
+================================
+CONEXIÓN DE SOCKETS
+================================
+*/
 
 io.on("connection", (socket) => {
-    console.log("Cliente conectado");
+  console.log("Cliente conectado:", socket.id);
 
-    // 1️⃣ JOIN MURO
-    socket.on("join_muro", ({ alumnoId }) => {
-        socket.join(alumnoId);
+  /*
+  =================================
+  EVENTO 1 — join_muro
+  El alumno se une a una sala
+  =================================
+  */
+  socket.on("join_muro", ({ alumnoId }) => {
+    socket.join(alumnoId);
 
-        if (!comentariosPorSala[alumnoId]) {
-            comentariosPorSala[alumnoId] = [];
-        }
+    if (!comentariosPorSala[alumnoId]) {
+      comentariosPorSala[alumnoId] = [];
+    }
 
-        socket.emit("joined_OK_muro", comentariosPorSala[alumnoId]);
-    });
+    socket.emit("joined_OK_muro", comentariosPorSala[alumnoId]);
+  });
 
-    // 2️⃣ PUBLICAR COMENTARIO
-    socket.on("publicar_comentario", ({ usuario, texto, categoria }) => {
-        const salas = Array.from(socket.rooms);
-        const sala = salas[1]; // la sala real (alumnoId)
+  /*
+  =================================
+  EVENTO 2 — publicar_comentario
+  Se recibe un comentario nuevo
+  =================================
+  */
+  socket.on("publicar_comentario", ({ usuario, texto, categoria }) => {
+    const salas = Array.from(socket.rooms);
+    const sala = salas[1]; // alumnoId
 
-        if (!sala) return;
+    if (!sala) return;
 
-        const nuevoComentario = {
-            id: Date.now(),
-            usuario,
-            texto,
-            categoria,
-            timestamp: new Date().toISOString(),
-        };
+    const nuevoComentario = {
+      id: Date.now(),
+      usuario,
+      texto,
+      categoria,
+      timestamp: new Date().toISOString(),
+    };
 
-        comentariosPorSala[sala].push(nuevoComentario);
+    comentariosPorSala[sala].push(nuevoComentario);
 
-        // Avisar a todos los clientes
-        io.to(sala).emit("nuevo_comentario", nuevoComentario);
+    io.to(sala).emit("nuevo_comentario", nuevoComentario);
 
-        // Si llega a 6 comentarios → muro lleno
-        if (comentariosPorSala[sala].length >= 6) {
-            io.to(sala).emit("muro_lleno");
-            comentariosPorSala[sala] = [];
-        }
-    });
+    // Regla del examen: muro lleno
+    if (comentariosPorSala[sala].length >= 6) {
+      io.to(sala).emit("muro_lleno");
+      comentariosPorSala[sala] = [];
+    }
+  });
 
-    socket.on("disconnect", () => {
-        console.log("Cliente desconectado");
-    });
+  socket.on("disconnect", () => {
+    console.log("Cliente desconectado:", socket.id);
+  });
 });
 
-/* ===============================
-   SERVIDOR
-================================ */
+/*
+================================
+SERVIDOR HTTP
+================================
+*/
 
 server.listen(4000, () => {
-    console.log("Servidor Socket.IO corriendo en puerto 4000");
+  console.log("Servidor Socket.IO escuchando en puerto 4000");
 });
